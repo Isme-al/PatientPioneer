@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Patient Pioneer</title>
+<meta name="description" content="Patient Pioneer privacy policy: how we collect, use, and protect information shared with us by research sites and patients." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F4F2ED;
+    --bg-alt: #EBE7DE;
+    --ink: #0E1212;
+    --ink-soft: #2A2F2F;
+    --muted: #6B716E;
+    --line: #D6D2C7;
+    --accent: #2F5D3A;
+    --accent-bright: #67D17E;
+    --paper: #FBFAF6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Geist', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image: radial-gradient(circle at 1px 1px, rgba(14,18,18,0.025) 1px, transparent 0);
+    background-size: 24px 24px;
+    opacity: 0.6;
+  }
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+  .container-wide {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(244, 242, 237, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    z-index: 100;
+    padding: 18px 0;
+  }
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--accent);
+    position: relative;
+  }
+  .logo-mark::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background: var(--accent-bright);
+  }
+  .nav-back {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .nav-back:hover { color: var(--accent); }
+
+  header.page-head {
+    padding: 80px 0 60px;
+  }
+  .eyebrow {
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--ink);
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+  .meta {
+    font-family: 'Geist Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+  .meta span + span { margin-left: 24px; }
+
+  article {
+    padding: 40px 0 120px;
+  }
+  article h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    margin: 56px 0 16px;
+    line-height: 1.15;
+  }
+  article h2:first-child { margin-top: 0; }
+  article h2 em { font-style: italic; color: var(--accent); }
+  article h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 19px;
+    margin: 32px 0 8px;
+    letter-spacing: -0.01em;
+  }
+  article p {
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  article ul {
+    margin: 12px 0 20px 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  article li {
+    color: var(--ink-soft);
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+  article li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  article strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  article a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  article a:hover { text-decoration-thickness: 2px; }
+
+  .toc {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 28px 32px;
+    margin-bottom: 48px;
+  }
+  .toc-label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .toc ol {
+    list-style: none;
+    counter-reset: toc;
+    columns: 2;
+    column-gap: 32px;
+  }
+  .toc li {
+    counter-increment: toc;
+    padding: 4px 0;
+    break-inside: avoid;
+  }
+  .toc a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    transition: color 0.2s;
+  }
+  .toc a::before {
+    content: counter(toc, decimal-leading-zero) " · ";
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-right: 4px;
+  }
+  .toc a:hover { color: var(--accent); }
+
+  .callout {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 15px;
+  }
+  .callout strong { display: block; margin-bottom: 6px; color: var(--ink); }
+
+  footer {
+    padding: 48px 0;
+    border-top: 1px solid var(--line);
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .footer-meta {
+    display: flex;
+    gap: 24px;
+    font-size: 13px;
+    color: var(--muted);
+    font-family: 'Geist Mono', monospace;
+  }
+  .footer-meta a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .footer-meta a:hover { color: var(--accent); }
+
+  @media (max-width: 700px) {
+    .toc ol { columns: 1; }
+    article h2 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container-wide nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"></span>
+      <span>Patient Pioneer</span>
+    </a>
+    <a href="index.html" class="nav-back">← Back to home</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="container">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy <em>Policy</em></h1>
+    <div class="meta">
+      <span>Effective: January 1, 2026</span>
+      <span>Last updated: April 28, 2026</span>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+
+    <div class="toc">
+      <div class="toc-label">/ Contents</div>
+      <ol>
+        <li><a href="#scope">Scope of this policy</a></li>
+        <li><a href="#info-we-collect">Information we collect</a></li>
+        <li><a href="#how-we-use">How we use information</a></li>
+        <li><a href="#sharing">Sharing & disclosure</a></li>
+        <li><a href="#hipaa">HIPAA & PHI handling</a></li>
+        <li><a href="#security">Data security</a></li>
+        <li><a href="#retention">Data retention</a></li>
+        <li><a href="#your-rights">Your rights</a></li>
+        <li><a href="#cookies">Cookies & analytics</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </div>
+
+    <p style="font-size: 17px; font-weight: 300;">Patient Pioneer ("we," "us," "our") provides clinical trial recruitment services to research sites and sponsors. This Privacy Policy describes how we collect, use, store, and disclose information when you visit our website or engage our services.</p>
+
+    <h2 id="scope">01 — Scope of this policy</h2>
+    <p>This policy applies to information collected through:</p>
+    <ul>
+      <li>Our website and any forms submitted through it</li>
+      <li>Email correspondence with our team</li>
+      <li>Service engagements with research sites and sponsors</li>
+      <li>Patient-facing recruitment campaigns we operate on behalf of clients</li>
+    </ul>
+    <p>It does <strong>not</strong> apply to data held by third-party platforms (study sponsors, EMR systems, CTMS platforms) outside our direct control.</p>
+
+    <h2 id="info-we-collect">02 — Information we collect</h2>
+
+    <h3>From research sites and sponsors</h3>
+    <ul>
+      <li>Contact details (name, role, email, phone, organization)</li>
+      <li>Study information (protocol number, indication, phase, enrollment targets, I/E criteria)</li>
+      <li>Operational details necessary for engagement scoping and delivery</li>
+    </ul>
+
+    <h3>From prospective trial participants</h3>
+    <ul>
+      <li>Contact details (name, email, phone, ZIP code)</li>
+      <li>Health-screening responses provided voluntarily through our pre-screening forms</li>
+      <li>Demographic information relevant to study eligibility</li>
+    </ul>
+
+    <h3>Automatically collected</h3>
+    <ul>
+      <li>Standard web analytics (IP address, browser type, pages visited, referral source)</li>
+      <li>Device and session metadata necessary for site operation</li>
+    </ul>
+
+    <h2 id="how-we-use">03 — How we use information</h2>
+    <p>We use information for the following purposes:</p>
+    <ul>
+      <li><strong>Service delivery:</strong> matching prospective participants to study eligibility and routing referrals to research sites</li>
+      <li><strong>Communication:</strong> responding to inquiries, sending engagement updates, and coordinating with research site coordinators</li>
+      <li><strong>Service improvement:</strong> analyzing recruitment funnel performance to refine outreach strategy</li>
+      <li><strong>Legal compliance:</strong> meeting obligations under applicable healthcare, advertising, and data-protection laws</li>
+    </ul>
+
+    <h2 id="sharing">04 — Sharing & disclosure</h2>
+    <p>We share information only as necessary to deliver our services or as required by law:</p>
+    <ul>
+      <li><strong>With research sites:</strong> pre-screened participant referrals are shared with the contracting research site for the specific study they consented to be considered for</li>
+      <li><strong>With service providers:</strong> hosting, email, CRM, and analytics vendors operating under written confidentiality and data-protection agreements</li>
+      <li><strong>For legal reasons:</strong> when required by subpoena, court order, regulatory request, or to protect rights, safety, and property</li>
+    </ul>
+    <p><strong>We do not sell personal information.</strong> We do not share participant health-screening responses with anyone other than the research site they consented to be referred to.</p>
+
+    <h2 id="hipaa">05 — HIPAA & Protected Health Information</h2>
+    <div class="callout">
+      <strong>Important context</strong>
+      Patient Pioneer is generally not a HIPAA-covered entity. However, when engaged by a research site that is a covered entity, we operate as a Business Associate under a written Business Associate Agreement (BAA) and handle Protected Health Information (PHI) accordingly.
+    </div>
+    <p>When acting as a Business Associate:</p>
+    <ul>
+      <li>PHI is handled only for the purpose specified in the BAA</li>
+      <li>Access is limited to personnel with a documented need to know</li>
+      <li>PHI is transmitted and stored using encrypted, access-controlled systems</li>
+      <li>Breach notification protocols are followed per 45 CFR § 164.410</li>
+    </ul>
+
+    <h2 id="security">06 — Data security</h2>
+    <p>We use commercially reasonable safeguards to protect information, including encryption in transit (TLS), encryption at rest for sensitive data stores, role-based access controls, and routine review of vendor security posture. No system is fully secure; we do not guarantee absolute security.</p>
+
+    <h2 id="retention">07 — Data retention</h2>
+    <ul>
+      <li><strong>Inquiry contact data:</strong> retained for up to 24 months from last contact, unless an active engagement begins</li>
+      <li><strong>Engagement records:</strong> retained for the duration of the engagement plus 7 years for tax, audit, and regulatory purposes</li>
+      <li><strong>Participant pre-screening data:</strong> retained per the contracting site's protocol and regulatory requirements; deleted on participant request unless retention is legally required</li>
+    </ul>
+
+    <h2 id="your-rights">08 — Your rights</h2>
+    <p>Depending on where you reside, you may have the right to:</p>
+    <ul>
+      <li>Request access to personal information we hold about you</li>
+      <li>Request correction of inaccurate information</li>
+      <li>Request deletion, subject to legal retention requirements</li>
+      <li>Opt out of marketing communications at any time</li>
+      <li>Withdraw consent to recruitment outreach</li>
+    </ul>
+    <p>To exercise these rights, email <a href="mailto:hello@patientpioneer.com">hello@patientpioneer.com</a>. We respond within 30 days.</p>
+
+    <h2 id="cookies">09 — Cookies & analytics</h2>
+    <p>We use minimal first-party analytics to understand site performance. We do not use cross-site tracking cookies for advertising. You can disable cookies through your browser settings without losing access to core site functionality.</p>
+
+    <h2 id="children">10 — Children's privacy</h2>
+    <p>Our services are not directed to children under 13. We do not knowingly collect information from children under 13. If you believe a child has submitted information to us, contact us immediately and we will delete it.</p>
+
+    <h2 id="changes">11 — Changes to this policy</h2>
+    <p>We may update this policy as our services evolve or as legal requirements change. Material changes will be posted on this page with an updated effective date. Continued use of our services after changes indicates acceptance.</p>
+
+    <h2 id="contact">12 — Contact us</h2>
+    <p>Questions, requests, or concerns:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:hello@patientpioneer.com">hello@patientpioneer.com</a></li>
+      <li><strong>Subject line:</strong> "Privacy inquiry"</li>
+    </ul>
+    <p>We respond to privacy inquiries within 5 business days and to formal data-rights requests within 30 days.</p>
+  </div>
+</article>
+
+<footer>
+  <div class="container-wide footer-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"></span>
+      <span>Patient Pioneer</span>
+    </a>
+    <div class="footer-meta">
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms</a>
+      <a href="https://www.linkedin.com/in/ismealahmed" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:hello@patientpioneer.com">hello@patientpioneer.com</a>
+      <span>© 2026 Patient Pioneer</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
