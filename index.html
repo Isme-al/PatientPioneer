@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patient Pioneer — Recruitment Partnerships for Research Sites</title>
+<meta name="description" content="Patient Pioneer is an independent clinical trial recruitment partner for research sites. MBBS, ACRP-CP. Five years of cross-therapeutic recruitment experience — direct, hands-on, no agency overhead." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F4F2ED;
+    --bg-alt: #EBE7DE;
+    --ink: #0E1212;
+    --ink-soft: #2A2F2F;
+    --muted: #6B716E;
+    --line: #D6D2C7;
+    --accent: #2F5D3A;
+    --accent-bright: #67D17E;
+    --paper: #FBFAF6;
+    --warn: #E8553A;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Geist', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Subtle paper grain */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(14,18,18,0.025) 1px, transparent 0);
+    background-size: 24px 24px;
+    opacity: 0.6;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(244, 242, 237, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    z-index: 100;
+    padding: 18px 0;
+  }
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .logo:hover { color: var(--accent); }
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--accent);
+    position: relative;
+    display: inline-block;
+  }
+  .logo-mark::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background: var(--accent-bright);
+  }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    align-items: center;
+  }
+  .nav-links a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 18px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--accent) !important; color: var(--paper) !important; }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 100px 0 120px;
+    position: relative;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-bright);
+    box-shadow: 0 0 0 4px rgba(103, 209, 126, 0.2);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(103, 209, 126, 0.2); }
+    50% { box-shadow: 0 0 0 8px rgba(103, 209, 126, 0.05); }
+  }
+
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(48px, 8vw, 104px);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    margin-bottom: 32px;
+    max-width: 1100px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+    font-variation-settings: "opsz" 144;
+  }
+  .hero-sub {
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 16px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background: var(--accent);
+    transform: translateY(-1px);
+  }
+  .btn-primary svg { transition: transform 0.2s; }
+  .btn-primary:hover svg { transform: translateX(3px); }
+
+  .btn-ghost {
+    color: var(--ink);
+    padding: 16px 24px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 6px;
+    border-radius: 0;
+  }
+  .btn-ghost:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* Hero stats strip */
+  .hero-stats {
+    margin-top: 96px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding-top: 40px;
+    border-top: 1px solid var(--line);
+  }
+  .stat-item .num {
+    font-family: 'Fraunces', serif;
+    font-size: 56px;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .stat-item .num span { color: var(--accent); }
+  .stat-item .label {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.4;
+    max-width: 220px;
+  }
+
+  /* Hero decorative blob */
+  .hero-blob {
+    position: absolute;
+    top: 60px;
+    right: -120px;
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle, rgba(103, 209, 126, 0.18) 0%, transparent 70%);
+    filter: blur(40px);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* ===== SECTION HEADERS ===== */
+  .section-head {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 64px;
+    margin-bottom: 64px;
+    align-items: end;
+  }
+  .section-label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--ink);
+  }
+  .section-head h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+  .section-head h2 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  /* ===== PROBLEM SECTION ===== */
+  .problem {
+    padding: 120px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .problem-card {
+    background: var(--bg-alt);
+    padding: 40px 32px;
+    transition: background 0.3s;
+  }
+  .problem-card:hover { background: var(--paper); }
+  .problem-card .num {
+    font-family: 'Geist Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .problem-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .problem-card p {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  /* ===== SERVICES ===== */
+  .services { padding: 140px 0; }
+  .service-list {
+    border-top: 1px solid var(--line);
+  }
+  .service-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 1.2fr 80px;
+    gap: 40px;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+    transition: padding 0.3s;
+    cursor: default;
+  }
+  .service-item:hover {
+    padding-left: 16px;
+  }
+  .service-item:hover h3 { color: var(--accent); }
+  .service-num {
+    font-family: 'Geist Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    padding-top: 8px;
+  }
+  .service-item h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    transition: color 0.3s;
+  }
+  .service-item p {
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .service-arrow {
+    text-align: right;
+    padding-top: 8px;
+    color: var(--muted);
+    transition: color 0.3s, transform 0.3s;
+  }
+  .service-item:hover .service-arrow {
+    color: var(--accent);
+    transform: translateX(8px);
+  }
+
+  /* ===== ABOUT / RECRUITER ===== */
+  .about {
+    padding: 140px 0;
+    background: var(--ink);
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .about::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(103, 209, 126, 0.08) 0%, transparent 70%);
+    filter: blur(60px);
+  }
+  .about .container { position: relative; }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-portrait {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  .portrait-frame {
+    aspect-ratio: 4 / 5;
+    background: linear-gradient(180deg, rgba(103, 209, 126, 0.12), rgba(47, 93, 58, 0.18));
+    border: 1px solid rgba(251, 250, 246, 0.12);
+    position: relative;
+    overflow: hidden;
+    max-width: 320px;
+  }
+  .portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: contrast(1.02) saturate(0.95);
+    transition: filter 0.4s ease;
+  }
+  .portrait-frame:hover .portrait-img {
+    filter: contrast(1.05) saturate(1);
+  }
+  .portrait-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    color: rgba(251, 250, 246, 0.4);
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 24px;
+  }
+  .portrait-placeholder svg {
+    width: 56px;
+    height: 56px;
+    stroke: rgba(251, 250, 246, 0.25);
+  }
+  .portrait-tag {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 320px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(251, 250, 246, 0.5);
+  }
+  .portrait-tag .name {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--paper);
+    text-transform: none;
+    letter-spacing: -0.01em;
+  }
+
+  .signature {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(251, 250, 246, 0.15);
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .signature-mark {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 32px;
+    color: var(--accent-bright);
+    line-height: 1;
+  }
+  .signature-meta {
+    font-size: 13px;
+    color: rgba(251, 250, 246, 0.7);
+    line-height: 1.5;
+  }
+  .signature-meta strong { color: var(--paper); font-weight: 500; }
+  .signature-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    color: var(--accent-bright);
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'Geist Mono', monospace;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(103, 209, 126, 0.25);
+    padding: 6px 12px;
+    border-radius: 100px;
+    transition: all 0.2s;
+    width: fit-content;
+  }
+  .signature-link:hover {
+    background: rgba(103, 209, 126, 0.1);
+    border-color: var(--accent-bright);
+  }
+  .signature-meta { display: flex; flex-direction: column; gap: 4px; }
+  .about-label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-bright);
+    margin-bottom: 24px;
+  }
+  .about h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(36px, 4.5vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 32px;
+  }
+  .about h2 em {
+    font-style: italic;
+    color: var(--accent-bright);
+  }
+  .about-bio {
+    font-size: 17px;
+    line-height: 1.65;
+    color: rgba(251, 250, 246, 0.85);
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+  .credentials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    margin-top: 32px;
+    background: rgba(251, 250, 246, 0.12);
+    border: 1px solid rgba(251, 250, 246, 0.12);
+  }
+  .cred-card {
+    background: var(--ink);
+    padding: 22px 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .cred-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    background: rgba(103, 209, 126, 0.12);
+    border: 1px solid rgba(103, 209, 126, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--accent-bright);
+    flex-shrink: 0;
+    letter-spacing: -0.02em;
+  }
+  .cred-body { flex: 1; min-width: 0; }
+  .cred-title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--paper);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .cred-issuer {
+    font-size: 12px;
+    color: rgba(251, 250, 246, 0.55);
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .cred-verify {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: var(--accent-bright);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+  }
+  .cred-verify:hover { border-color: var(--accent-bright); }
+  .cred-verify svg { width: 10px; height: 10px; }
+
+  .about-experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(251, 250, 246, 0.12);
+    border: 1px solid rgba(251, 250, 246, 0.12);
+  }
+  .exp-card {
+    background: var(--ink);
+    padding: 32px 28px;
+  }
+  .exp-card .label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-bright);
+    margin-bottom: 16px;
+  }
+  .exp-card .big {
+    font-family: 'Fraunces', serif;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .exp-card p {
+    font-size: 14px;
+    color: rgba(251, 250, 246, 0.7);
+    line-height: 1.5;
+  }
+  .therapeutic-areas {
+    grid-column: 1 / -1;
+    background: var(--ink);
+    padding: 32px 28px;
+  }
+  .therapeutic-areas .label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-bright);
+    margin-bottom: 20px;
+  }
+  .ta-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+  }
+  .ta-list span { color: var(--paper); }
+  .ta-list span + span::before {
+    content: '·';
+    margin-right: 20px;
+    color: rgba(251, 250, 246, 0.3);
+  }
+
+  /* ===== PROCESS ===== */
+  .process { padding: 140px 0; }
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-top: 32px;
+  }
+  .process-step {
+    position: relative;
+  }
+  .process-step .step-num {
+    font-family: 'Fraunces', serif;
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--accent);
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+  .process-step h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    margin-bottom: 12px;
+  }
+  .process-step p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .process-step::after {
+    content: '→';
+    position: absolute;
+    top: 28px;
+    right: -20px;
+    color: var(--line);
+    font-size: 20px;
+  }
+  .process-step:last-child::after { display: none; }
+
+  /* ===== CTA ===== */
+  .cta {
+    padding: 140px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .cta::before {
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(47, 93, 58, 0.12) 0%, transparent 70%);
+    filter: blur(50px);
+  }
+  .cta .container { position: relative; }
+  .cta-inner {
+    text-align: center;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .cta-eyebrow {
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 32px;
+  }
+  .cta h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(40px, 6vw, 76px);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 32px;
+  }
+  .cta h2 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .cta p {
+    font-size: 19px;
+    color: var(--ink-soft);
+    margin-bottom: 48px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  .cta-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 22px 36px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-family: 'Geist Mono', monospace;
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+  .cta-email:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(47, 93, 58, 0.25);
+  }
+  .cta-note {
+    margin-top: 32px;
+    font-size: 13px;
+    color: var(--muted);
+    font-family: 'Geist Mono', monospace;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    padding: 48px 0;
+    border-top: 1px solid var(--line);
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .footer-meta {
+    display: flex;
+    gap: 24px;
+    font-size: 13px;
+    color: var(--muted);
+    font-family: 'Geist Mono', monospace;
+  }
+  .footer-meta a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .footer-meta a:hover { color: var(--accent); }
+
+  /* ===== ANIMATIONS ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .container { padding: 0 24px; }
+    .nav-links { display: none; }
+    .nav-links.show-cta { display: flex; gap: 0; }
+    .nav-links.show-cta li:not(.cta-li) { display: none; }
+    .hero { padding: 60px 0 80px; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 32px 24px; margin-top: 64px; }
+    .stat-item .num { font-size: 42px; }
+    .section-head { grid-template-columns: 1fr; gap: 24px; margin-bottom: 48px; }
+    .problem-grid { grid-template-columns: 1fr; }
+    .service-item { grid-template-columns: 50px 1fr; gap: 16px; }
+    .service-item p, .service-arrow { grid-column: 2; }
+    .service-arrow { display: none; }
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .about-experience { grid-template-columns: 1fr; }
+    .credentials { grid-template-columns: 1fr; }
+    .portrait-frame { max-width: 240px; }
+    .portrait-tag { max-width: 240px; }
+    .process-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .process-step::after { display: none; }
+    .problem, .services, .about, .process, .cta { padding: 80px 0; }
+    .cta-email { font-size: 14px; padding: 18px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark"></span>
+      <span>Patient Pioneer</span>
+    </a>
+    <ul class="nav-links show-cta">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#process">Process</a></li>
+      <li class="cta-li"><a href="#contact" class="nav-cta">Get in touch</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-blob"></div>
+  <div class="container">
+    <div class="hero-eyebrow">Independent Recruiter · For Research Sites</div>
+    <h1 class="reveal">
+      Enrollment is the bottleneck. <em>I'm the unblock.</em>
+    </h1>
+    <p class="hero-sub reveal">
+      I'm an independent clinical trial recruiter working directly with research sites to fill enrollment gaps with qualified, pre-screened, protocol-ready patients — across therapeutic areas and study phases.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#contact" class="btn-primary">
+        Work with me
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#services" class="btn-ghost">See how it works</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="num">5<span>+</span></div>
+        <div class="label">Years recruiting across multiple therapeutic areas</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">MBBS</div>
+        <div class="label">Clinically trained — fluency in protocol & I/E criteria</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">ACRP<span>-CP</span></div>
+        <div class="label">Certified clinical research professional</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">100<span>%</span></div>
+        <div class="label">Pre-screened referrals — no padding, no waste</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">The Reality</div>
+      <h2>Most sites lose studies <em>not for lack of patients</em> — but for lack of throughput.</h2>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="num">01 / The Gap</div>
+        <h3>Coordinators are buried in chart review.</h3>
+        <p>EMR mining, pre-screening calls, and outreach pull CRCs away from active visits. Recruitment slows. Sponsors notice.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">02 / The Cost</div>
+        <h3>Vendor lists generate noise, not enrollment.</h3>
+        <p>Mass-market campaigns flood phone lines with unqualified leads. Ten hours of screening for one consent isn't a strategy — it's attrition.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">03 / The Risk</div>
+        <h3>Missed targets close future doors.</h3>
+        <p>Sponsors track enrollment by site. One under-performing study can quietly remove you from the next protocol's site selection list.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">What I Do</div>
+      <h2>An independent recruiter who <em>thinks like a coordinator</em> and works like a vendor.</h2>
+    </div>
+    <div class="service-list">
+      <div class="service-item">
+        <div class="service-num">01</div>
+        <div>
+          <h3>Pre-Screened Patient Referrals</h3>
+        </div>
+        <p>Every referral is screened against your protocol's I/E criteria before it reaches your team. You receive completed pre-screening forms — not raw leads.</p>
+        <div class="service-arrow">→</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">02</div>
+        <div>
+          <h3>Protocol-Specific Outreach</h3>
+        </div>
+        <p>Recruitment messaging built around your protocol's actual language — phase, indication, key endpoints, visit burden. Patients arrive informed and self-qualified.</p>
+        <div class="service-arrow">→</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">03</div>
+        <div>
+          <h3>Enrollment Rescue</h3>
+        </div>
+        <p>Studies behind on screening targets get a focused recruitment push — short-term engagements aimed at closing the gap before the next sponsor check-in.</p>
+        <div class="service-arrow">→</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">04</div>
+        <div>
+          <h3>Site Recruitment Strategy</h3>
+        </div>
+        <p>For sites building internal recruitment capability: workflow design, EMR query templates, scripts, and outreach playbooks tailored to your therapeutic mix.</p>
+        <div class="service-arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="about-portrait">
+          <div class="portrait-frame">
+            <img src="headshot.jpg" alt="Ismeal Ahmed, Founder of Patient Pioneer" class="portrait-img">
+          </div>
+          <div class="portrait-tag">
+            <span class="name">Ismeal Ahmed</span>
+            <span>Founder</span>
+          </div>
+        </div>
+        <div class="about-label">/ The Recruiter</div>
+        <h2>Independent.<br>Clinically trained. <em>Operationally fluent.</em></h2>
+      </div>
+
+      <div>
+        <p class="about-bio">
+          Hi — I'm an independent clinical trial recruiter. Patient Pioneer is a one-person practice, by design.
+        </p>
+        <p class="about-bio">
+          When you work with me, you work with me — not an account manager, not a junior coordinator. Every referral, every weekly report, every protocol read-through goes through the same person who answered your first email.
+        </p>
+        <p class="about-bio">
+          Five years of clinical trial recruitment across multiple therapeutic areas, plus an MBBS and ACRP-CP certification. The clinical training matters: recruiters who don't read protocols miss exclusions; recruiters who don't know enrollment timelines miss screen-fail patterns. I read your protocol the way your monitor does.
+        </p>
+        <div class="credentials">
+          <div class="cred-card">
+            <div class="cred-icon">M</div>
+            <div class="cred-body">
+              <div class="cred-title">MBBS — Bachelor of Medicine</div>
+              <div class="cred-issuer">Bachelor of Surgery · Medical degree</div>
+            </div>
+          </div>
+          <div class="cred-card">
+            <div class="cred-icon">A</div>
+            <div class="cred-body">
+              <div class="cred-title">ACRP Certified Professional</div>
+              <div class="cred-issuer">Association of Clinical Research Professionals</div>
+              <a href="https://www.credly.com/badges/28677078-6bbb-4df2-810d-ee9ec6cf9880/public_url" target="_blank" rel="noopener" class="cred-verify">
+                Verify credential
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="cred-card">
+            <div class="cred-icon">G</div>
+            <div class="cred-body">
+              <div class="cred-title">Good Clinical Practice (GCP)</div>
+              <div class="cred-issuer">CITI Program</div>
+              <a href="https://www.citiprogram.org/verify/?wd2f4841c-2566-4518-acc9-92a981083873-65533898" target="_blank" rel="noopener" class="cred-verify">
+                Verify credential
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="cred-card">
+            <div class="cred-icon">5+</div>
+            <div class="cred-body">
+              <div class="cred-title">5+ Years Experience</div>
+              <div class="cred-issuer">Clinical trial recruitment, multiple TAs</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-experience" style="margin-top: 40px;">
+          <div class="exp-card">
+            <div class="label">Studies Supported</div>
+            <div class="big">Phase II–IV</div>
+            <p>Interventional and observational protocols across late-stage development.</p>
+          </div>
+          <div class="exp-card">
+            <div class="label">Working Style</div>
+            <div class="big">Embedded</div>
+            <p>I integrate with your CRC team, your EMR workflow, and your sponsor cadence.</p>
+          </div>
+          <div class="therapeutic-areas">
+            <div class="label">Therapeutic Experience</div>
+            <div class="ta-list">
+              <span>Cardiology</span>
+              <span>Endocrinology</span>
+              <span>Neurology</span>
+              <span>Oncology</span>
+              <span>Pulmonology</span>
+              <span>Dermatology</span>
+              <span>Women's Health</span>
+              <span>Internal Medicine</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="signature">
+          <div class="signature-mark">— Ismeal</div>
+          <div class="signature-meta">
+            <strong>Ismeal Ahmed, MBBS, ACRP-CP</strong> · Founder, Patient Pioneer
+            <a href="https://www.linkedin.com/in/ismealahmed" target="_blank" rel="noopener" class="signature-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">How I Work</div>
+      <h2>How I work. <em>No long-term lock-in.</em></h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-num">i</div>
+        <h4>Discovery</h4>
+        <p>30-minute call. I review your protocol, current enrollment status, and gaps. No fee, no commitment.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">ii</div>
+        <h4>Scoped Proposal</h4>
+        <p>A clear scope: target referrals, timeline, channels, and pricing. You see the plan before anything starts.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">iii</div>
+        <h4>Recruit & Screen</h4>
+        <p>Outreach launches. Pre-screened candidates are routed to your CRC team with completed intake forms.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">iv</div>
+        <h4>Track & Adjust</h4>
+        <p>Weekly funnel reports. Channel performance reviewed. Targeting refined until enrollment closes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-eyebrow">Let's talk enrollment</div>
+      <h2>Behind on a study? <em>Let's fix it.</em></h2>
+      <p>Send a short note about your study — phase, indication, target enrollment, and current gap. You'll get a response within one business day.</p>
+      <a href="mailto:hello@patientpioneer.com?subject=Recruitment%20Partnership%20Inquiry&body=Hi%20Patient%20Pioneer%2C%0A%0AStudy%20phase%3A%20%0ATherapeutic%20area%20%2F%20indication%3A%20%0ATarget%20enrollment%3A%20%0ACurrent%20gap%3A%20%0ATimeline%3A%20%0A%0ABest%2C%0A" class="cta-email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        hello@patientpioneer.com
+      </a>
+      <div class="cta-note">→ Response within 1 business day · Confidential review</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="logo">
+      <span class="logo-mark"></span>
+      <span>Patient Pioneer</span>
+    </div>
+    <div class="footer-meta">
+      <a href="https://www.linkedin.com/in/ismealahmed" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:hello@patientpioneer.com">hello@patientpioneer.com</a>
+      <span>© 2026 Patient Pioneer</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal, .hero h1, .hero-sub, .hero-actions, .hero-stats, .section-head, .problem-card, .service-item, .process-step, .about-grid > *, .cta-inner > *');
+  reveals.forEach(el => el.classList.add('reveal'));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+  reveals.forEach(el => io.observe(el));
+
+  // Trigger initial hero reveal
+  setTimeout(() => {
+    document.querySelectorAll('.hero .reveal').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), i * 120);
+    });
+  }, 100);
+</script>
+
+</body>
+</html>
