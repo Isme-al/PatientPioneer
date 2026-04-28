@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms of Service — Patient Pioneer</title>
+<meta name="description" content="Patient Pioneer terms of service: rules and conditions for using our website and recruitment services." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F4F2ED;
+    --bg-alt: #EBE7DE;
+    --ink: #0E1212;
+    --ink-soft: #2A2F2F;
+    --muted: #6B716E;
+    --line: #D6D2C7;
+    --accent: #2F5D3A;
+    --accent-bright: #67D17E;
+    --paper: #FBFAF6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Geist', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image: radial-gradient(circle at 1px 1px, rgba(14,18,18,0.025) 1px, transparent 0);
+    background-size: 24px 24px;
+    opacity: 0.6;
+  }
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+  .container-wide {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(244, 242, 237, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    z-index: 100;
+    padding: 18px 0;
+  }
+  .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--accent);
+    position: relative;
+  }
+  .logo-mark::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background: var(--accent-bright);
+  }
+  .nav-back {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .nav-back:hover { color: var(--accent); }
+
+  header.page-head { padding: 80px 0 60px; }
+  .eyebrow {
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--ink); }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+  .meta {
+    font-family: 'Geist Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+  .meta span + span { margin-left: 24px; }
+
+  article { padding: 40px 0 120px; }
+  article h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    margin: 56px 0 16px;
+    line-height: 1.15;
+  }
+  article h2:first-child { margin-top: 0; }
+  article h2 em { font-style: italic; color: var(--accent); }
+  article h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 19px;
+    margin: 32px 0 8px;
+    letter-spacing: -0.01em;
+  }
+  article p { color: var(--ink-soft); margin-bottom: 16px; font-size: 16px; }
+  article ul { margin: 12px 0 20px; padding-left: 0; list-style: none; }
+  article li {
+    color: var(--ink-soft);
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+  article li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  article strong { color: var(--ink); font-weight: 500; }
+  article a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  article a:hover { text-decoration-thickness: 2px; }
+
+  .toc {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 28px 32px;
+    margin-bottom: 48px;
+  }
+  .toc-label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .toc ol {
+    list-style: none;
+    counter-reset: toc;
+    columns: 2;
+    column-gap: 32px;
+  }
+  .toc li {
+    counter-increment: toc;
+    padding: 4px 0;
+    break-inside: avoid;
+  }
+  .toc a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+  }
+  .toc a::before {
+    content: counter(toc, decimal-leading-zero) " · ";
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-right: 4px;
+  }
+  .toc a:hover { color: var(--accent); }
+
+  .callout {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 15px;
+  }
+  .callout strong { display: block; margin-bottom: 6px; color: var(--ink); }
+
+  footer { padding: 48px 0; border-top: 1px solid var(--line); }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .footer-meta {
+    display: flex;
+    gap: 24px;
+    font-size: 13px;
+    color: var(--muted);
+    font-family: 'Geist Mono', monospace;
+  }
+  .footer-meta a { color: var(--muted); text-decoration: none; }
+  .footer-meta a:hover { color: var(--accent); }
+
+  @media (max-width: 700px) {
+    .toc ol { columns: 1; }
+    article h2 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container-wide nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"></span>
+      <span>Patient Pioneer</span>
+    </a>
+    <a href="index.html" class="nav-back">← Back to home</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="container">
+    <div class="eyebrow">Legal</div>
+    <h1>Terms of <em>Service</em></h1>
+    <div class="meta">
+      <span>Effective: January 1, 2026</span>
+      <span>Last updated: April 28, 2026</span>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+
+    <div class="toc">
+      <div class="toc-label">/ Contents</div>
+      <ol>
+        <li><a href="#agreement">Agreement to terms</a></li>
+        <li><a href="#services">Description of services</a></li>
+        <li><a href="#engagement">Engagement & scope</a></li>
+        <li><a href="#fees">Fees & payment</a></li>
+        <li><a href="#confidentiality">Confidentiality</a></li>
+        <li><a href="#ip">Intellectual property</a></li>
+        <li><a href="#regulatory">Regulatory compliance</a></li>
+        <li><a href="#no-medical">No medical advice</a></li>
+        <li><a href="#warranties">Warranties & disclaimers</a></li>
+        <li><a href="#liability">Limitation of liability</a></li>
+        <li><a href="#indemnification">Indemnification</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#governing-law">Governing law & disputes</a></li>
+        <li><a href="#changes">Changes to terms</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </div>
+
+    <p style="font-size: 17px; font-weight: 300;">These Terms of Service ("Terms") govern your access to and use of the Patient Pioneer website and any clinical trial recruitment services we provide. By using our website or engaging our services, you agree to these Terms.</p>
+
+    <h2 id="agreement">01 — Agreement to terms</h2>
+    <p>If you access this website on behalf of an organization, you represent that you have authority to bind that organization to these Terms. If you do not agree, do not use the site or our services.</p>
+
+    <h2 id="services">02 — Description of services</h2>
+    <p>Patient Pioneer provides clinical trial recruitment services to research sites and sponsors, including:</p>
+    <ul>
+      <li>Pre-screened patient referrals</li>
+      <li>Protocol-specific recruitment outreach</li>
+      <li>Enrollment rescue engagements for studies behind target</li>
+      <li>Site recruitment strategy and workflow consulting</li>
+    </ul>
+    <p>Specific deliverables, timelines, and pricing for each engagement are defined in a separate written Service Agreement or Statement of Work ("Engagement Document"). In any conflict between these Terms and an Engagement Document, the Engagement Document controls.</p>
+
+    <h2 id="engagement">03 — Engagement & scope</h2>
+    <p>Services begin only after both parties execute a written Engagement Document. Patient Pioneer reserves the right to decline or pause an engagement if:</p>
+    <ul>
+      <li>The proposed scope conflicts with applicable regulations (FDA, HIPAA, IRB requirements, state advertising laws)</li>
+      <li>Required protocol or site documentation is not provided</li>
+      <li>Payment terms are not met</li>
+      <li>The engagement would create a conflict of interest with another active client</li>
+    </ul>
+
+    <h2 id="fees">04 — Fees & payment</h2>
+    <p>Fees, billing structure (per-referral, milestone, or retainer), and payment terms are specified in each Engagement Document. Unless stated otherwise:</p>
+    <ul>
+      <li>Invoices are due within 30 days of issue</li>
+      <li>Late payments accrue interest at 1.5% per month or the maximum allowed by law, whichever is lower</li>
+      <li>Patient Pioneer may suspend services if invoices remain unpaid past 45 days</li>
+      <li>All fees are exclusive of applicable taxes</li>
+    </ul>
+
+    <h2 id="confidentiality">05 — Confidentiality</h2>
+    <p>Both parties agree to maintain the confidentiality of non-public information shared during an engagement, including protocol details, enrollment data, recruitment strategies, and pricing. This obligation survives termination of the engagement for five (5) years, except for trade secrets, which are protected indefinitely.</p>
+    <p>Where a separate Mutual Non-Disclosure Agreement (NDA) or Business Associate Agreement (BAA) is in place, that agreement governs in addition to this section.</p>
+
+    <h2 id="ip">06 — Intellectual property</h2>
+
+    <h3>Pre-existing IP</h3>
+    <p>Each party retains ownership of intellectual property it brings to the engagement, including Patient Pioneer's recruitment methodologies, screening templates, outreach frameworks, and software tools.</p>
+
+    <h3>Engagement deliverables</h3>
+    <p>Unless otherwise specified in writing, study-specific deliverables (custom landing pages, study-specific creative, completed pre-screening forms) become the client's property upon full payment. Patient Pioneer retains a non-exclusive license to use anonymized, aggregated performance data for service improvement and case studies (no client or patient identifiers used without written consent).</p>
+
+    <h3>Client materials</h3>
+    <p>Client retains ownership of all protocol materials, IRB-approved language, branding, and patient data shared with Patient Pioneer.</p>
+
+    <h2 id="regulatory">07 — Regulatory compliance</h2>
+    <p>All recruitment activities operate under applicable laws and regulations, including:</p>
+    <ul>
+      <li>FDA regulations (21 CFR Parts 50, 56, 312)</li>
+      <li>HIPAA Privacy and Security Rules (45 CFR Parts 160, 164)</li>
+      <li>ICH Good Clinical Practice (GCP) E6(R3)</li>
+      <li>Applicable state and local advertising laws</li>
+      <li>IRB-approved recruitment language and channels</li>
+    </ul>
+    <div class="callout">
+      <strong>Client responsibility</strong>
+      The contracting research site is responsible for obtaining IRB approval of all recruitment materials before deployment. Patient Pioneer will not launch outreach that has not been documented as IRB-approved.
+    </div>
+
+    <h2 id="no-medical">08 — No medical advice</h2>
+    <p>Information on this website and in our recruitment communications is for informational purposes only. It is not medical advice and does not establish a doctor-patient relationship. Pre-screening responses are used solely for study eligibility assessment and are not a substitute for clinical evaluation by a licensed healthcare provider.</p>
+
+    <h2 id="warranties">09 — Warranties & disclaimers</h2>
+    <p>Patient Pioneer warrants that services will be performed in a professional and workmanlike manner consistent with industry standards.</p>
+    <p><strong>We do not guarantee specific enrollment outcomes.</strong> Recruitment performance depends on many factors outside our control, including protocol design, I/E criteria, site responsiveness, IRB-approved language, market conditions, and patient willingness to participate. Any enrollment estimates discussed are projections, not commitments.</p>
+    <p>Except as expressly stated in these Terms or an Engagement Document, services are provided "as is." We disclaim all other warranties, express or implied, including merchantability, fitness for a particular purpose, and non-infringement, to the maximum extent permitted by law.</p>
+
+    <h2 id="liability">10 — Limitation of liability</h2>
+    <p>To the maximum extent permitted by law, Patient Pioneer's aggregate liability for any claim arising out of these Terms or an engagement is limited to the fees paid by the client in the 12 months preceding the claim. Neither party is liable for indirect, incidental, consequential, or punitive damages, including lost profits or lost data.</p>
+    <p>This limitation does not apply to: (a) breach of confidentiality obligations, (b) indemnification obligations, (c) gross negligence or willful misconduct, or (d) liabilities that cannot be excluded under applicable law.</p>
+
+    <h2 id="indemnification">11 — Indemnification</h2>
+    <p>Each party agrees to indemnify and hold the other harmless from third-party claims arising out of its own breach of these Terms, gross negligence, or willful misconduct. Specific to the client: indemnification covers claims arising from protocol design, IRB language, or site-level conduct outside Patient Pioneer's control.</p>
+
+    <h2 id="termination">12 — Termination</h2>
+    <p>Either party may terminate an engagement:</p>
+    <ul>
+      <li>For convenience with 30 days' written notice (unless otherwise stated in the Engagement Document)</li>
+      <li>For material breach if the breach is not cured within 15 days of written notice</li>
+      <li>Immediately if the other party becomes insolvent, files for bankruptcy, or ceases operations</li>
+    </ul>
+    <p>On termination, the client pays all fees earned through the termination date, plus any non-cancelable third-party costs already incurred. Confidentiality, IP, and limitation-of-liability provisions survive termination.</p>
+
+    <h2 id="governing-law">13 — Governing law & disputes</h2>
+    <p>These Terms are governed by the laws of the State of Illinois, without regard to conflict-of-laws principles. The parties will first attempt to resolve disputes through good-faith negotiation. Unresolved disputes will be submitted to binding arbitration under the Commercial Arbitration Rules of the American Arbitration Association, seated in Chicago, Illinois. Either party may seek injunctive relief in court for IP or confidentiality matters.</p>
+
+    <h2 id="changes">14 — Changes to terms</h2>
+    <p>We may update these Terms from time to time. Material changes will be posted on this page with a revised effective date. For active engagements, the version of the Terms in effect at execution of the Engagement Document continues to apply unless both parties agree in writing to update.</p>
+
+    <h2 id="contact">15 — Contact</h2>
+    <p>For questions about these Terms or to provide notices required under them:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:hello@patientpioneer.com">hello@patientpioneer.com</a></li>
+      <li><strong>Subject line:</strong> "Legal notice" or "Terms inquiry"</li>
+    </ul>
+  </div>
+</article>
+
+<footer>
+  <div class="container-wide footer-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"></span>
+      <span>Patient Pioneer</span>
+    </a>
+    <div class="footer-meta">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://www.linkedin.com/in/ismealahmed" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:hello@patientpioneer.com">hello@patientpioneer.com</a>
+      <span>© 2026 Patient Pioneer</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
