@@ -335,6 +335,65 @@
 
   /* ===== SERVICES ===== */
   .services { padding: 140px 0; }
+
+  .service-callout {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 48px 56px;
+    margin-bottom: 72px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 56px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-callout::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(103, 209, 126, 0.12) 0%, transparent 70%);
+    filter: blur(40px);
+  }
+  .callout-mark {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 96px;
+    line-height: 0.85;
+    color: var(--accent-bright);
+    letter-spacing: -0.04em;
+    position: relative;
+    z-index: 1;
+  }
+  .callout-body { position: relative; z-index: 1; }
+  .callout-eyebrow {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-bright);
+    margin-bottom: 12px;
+  }
+  .callout-body h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    color: var(--paper);
+  }
+  .callout-body h3 em { font-style: italic; color: var(--accent-bright); }
+  .callout-body p {
+    font-size: 15px;
+    color: rgba(251, 250, 246, 0.75);
+    line-height: 1.6;
+    max-width: 620px;
+  }
+
   .service-list {
     border-top: 1px solid var(--line);
   }
@@ -559,8 +618,8 @@
     align-items: flex-start;
   }
   .cred-icon {
-    width: 44px;
-    height: 44px;
+    width: 52px;
+    height: 52px;
     border-radius: 6px;
     background: rgba(103, 209, 126, 0.12);
     border: 1px solid rgba(103, 209, 126, 0.2);
@@ -573,6 +632,19 @@
     color: var(--accent-bright);
     flex-shrink: 0;
     letter-spacing: -0.02em;
+    overflow: hidden;
+    padding: 4px;
+  }
+  .cred-icon.cred-badge {
+    background: var(--paper);
+    border-color: rgba(251, 250, 246, 0.18);
+    padding: 5px;
+  }
+  .cred-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
   }
   .cred-body { flex: 1; min-width: 0; }
   .cred-title {
@@ -834,6 +906,9 @@
     .service-item { grid-template-columns: 50px 1fr; gap: 16px; }
     .service-item p, .service-arrow { grid-column: 2; }
     .service-arrow { display: none; }
+    .service-callout { grid-template-columns: 1fr; gap: 24px; padding: 36px 28px; margin-bottom: 48px; }
+    .callout-mark { font-size: 64px; }
+    .callout-body h3 { font-size: 22px; }
     .about-grid { grid-template-columns: 1fr; gap: 48px; }
     .about-experience { grid-template-columns: 1fr; }
     .credentials { grid-template-columns: 1fr; }
@@ -872,7 +947,7 @@
       Enrollment is the bottleneck. <em>I'm the unblock.</em>
     </h1>
     <p class="hero-sub reveal">
-      I'm an independent clinical trial recruiter working directly with research sites to fill enrollment gaps with qualified, pre-screened, protocol-ready patients — across therapeutic areas and study phases.
+      I'm a physician-trained, independent clinical trial recruiter. I run the full chart-to-consent pipeline — EMR review, pre-screening, and qualified patient referrals — for research sites across multiple therapeutic areas.
     </p>
     <div class="hero-actions reveal">
       <a href="#contact" class="btn-primary">
@@ -935,19 +1010,37 @@
   <div class="container">
     <div class="section-head">
       <div class="section-label">What I Do</div>
-      <h2>An independent recruiter who <em>thinks like a coordinator</em> and works like a vendor.</h2>
+      <h2>Chart-to-consent recruitment, <em>read by a physician.</em></h2>
     </div>
+
+    <div class="service-callout">
+      <div class="callout-mark">Rx</div>
+      <div class="callout-body">
+        <div class="callout-eyebrow">/ The Differentiator</div>
+        <h3>Most recruiters can't read a chart. <em>I can.</em></h3>
+        <p>The bottleneck in site recruitment isn't ad spend — it's chart review. Mining your EMR for protocol-eligible patients, then deeply reviewing each chart against I/E criteria, takes clinical judgment most recruiters don't have. As an MBBS-trained recruiter, I run that pipeline end-to-end: I find the patients hiding in your charts, screen them against the protocol the way your monitor would, and hand them to your CRC team consent-ready.</p>
+      </div>
+    </div>
+
     <div class="service-list">
       <div class="service-item">
         <div class="service-num">01</div>
         <div>
-          <h3>Pre-Screened Patient Referrals</h3>
+          <h3>Chart Review & EMR Mining</h3>
         </div>
-        <p>Every referral is screened against your protocol's I/E criteria before it reaches your team. You receive completed pre-screening forms — not raw leads.</p>
+        <p>I work directly inside your EMR or on de-identified extracts to surface protocol-eligible patients. Every flagged chart gets a deep clinical read — not just keyword matching — against the full I/E criteria, including labs, comorbidities, and washout windows.</p>
         <div class="service-arrow">→</div>
       </div>
       <div class="service-item">
         <div class="service-num">02</div>
+        <div>
+          <h3>Pre-Screened Patient Referrals</h3>
+        </div>
+        <p>For external recruitment, every referral is screened against your protocol's I/E criteria before reaching your team. You receive completed pre-screening forms with chart-level rationale — not raw leads.</p>
+        <div class="service-arrow">→</div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">03</div>
         <div>
           <h3>Protocol-Specific Outreach</h3>
         </div>
@@ -955,19 +1048,19 @@
         <div class="service-arrow">→</div>
       </div>
       <div class="service-item">
-        <div class="service-num">03</div>
+        <div class="service-num">04</div>
         <div>
           <h3>Enrollment Rescue</h3>
         </div>
-        <p>Studies behind on screening targets get a focused recruitment push — short-term engagements aimed at closing the gap before the next sponsor check-in.</p>
+        <p>Studies behind on screening targets get a focused push combining chart review and external outreach — short-term engagements aimed at closing the gap before the next sponsor check-in.</p>
         <div class="service-arrow">→</div>
       </div>
       <div class="service-item">
-        <div class="service-num">04</div>
+        <div class="service-num">05</div>
         <div>
           <h3>Site Recruitment Strategy</h3>
         </div>
-        <p>For sites building internal recruitment capability: workflow design, EMR query templates, scripts, and outreach playbooks tailored to your therapeutic mix.</p>
+        <p>For sites building internal capability: chart review workflows, EMR query templates, screening scripts, and outreach playbooks tailored to your therapeutic mix.</p>
         <div class="service-arrow">→</div>
       </div>
     </div>
@@ -1011,10 +1104,12 @@
             </div>
           </div>
           <div class="cred-card">
-            <div class="cred-icon">A</div>
+            <div class="cred-icon cred-badge">
+              <img src="badge-acrp.png" alt="ACRP-CP Certified Professional badge">
+            </div>
             <div class="cred-body">
               <div class="cred-title">ACRP Certified Professional</div>
-              <div class="cred-issuer">Association of Clinical Research Professionals</div>
+              <div class="cred-issuer">Association of Clinical Research Professionals · Verified by Credly</div>
               <a href="https://www.credly.com/badges/28677078-6bbb-4df2-810d-ee9ec6cf9880/public_url" target="_blank" rel="noopener" class="cred-verify">
                 Verify credential
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
@@ -1022,10 +1117,12 @@
             </div>
           </div>
           <div class="cred-card">
-            <div class="cred-icon">G</div>
+            <div class="cred-icon cred-badge">
+              <img src="badge-citi.png" alt="CITI Program logo">
+            </div>
             <div class="cred-body">
               <div class="cred-title">Good Clinical Practice (GCP)</div>
-              <div class="cred-issuer">CITI Program</div>
+              <div class="cred-issuer">CITI Program · Credential ID 65533898</div>
               <a href="https://www.citiprogram.org/verify/?wd2f4841c-2566-4518-acc9-92a981083873-65533898" target="_blank" rel="noopener" class="cred-verify">
                 Verify credential
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
